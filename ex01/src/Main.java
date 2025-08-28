@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
+
+    public static Integer vet = 0;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -35,12 +38,13 @@ public class Main {
     }
 
     public static Double[] preencheVetor (Double[] vetor, Scanner sc) {
-        System.out.println("Insira os valores para o Vetor:");
-
+        ++vet;
+        System.out.println("Insira os valores para o Vetor " + vet);
         for (int i = 0; i < vetor.length; i++) {
+            System.out.print("Posição [" + i + "] :");
             vetor[i] = sc.nextDouble();
         }
-
+        System.out.println();
         return vetor;
     }
 
